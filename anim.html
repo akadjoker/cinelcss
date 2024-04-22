@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Animações CSS</title>
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body class="pagina-entrada">
+    <h2>Exemplos de Animações CSS</h2>
+
+    
+
+
+
+    <div class="animation-container">
+   
+        <div class="animated-box scale-animation"></div>
+
+
+    <div class="animated-box rotate-animation"></div>
+
+
+    <div class="move-animated-box"></div>
+
+    <script>
+
+    window.addEventListener("load", function() 
+    {
+
+        var animatedBox = document.querySelector('.move-animated-box');
+        animatedBox.classList.add('move-animation');
+    });
+    </script>
+
+
+    </div>
+
+    <div class="aquario-container">
+        <div class="aquario">
+            <div class="peixe"></div>
+            <div class="peixe"></div>
+            <div class="peixe"></div>
+        </div>
+    </div>
+
+   
+    <div class="ios-container">
+     
+     
+        <div class="box" data-aos="fade-right">
+            <h2>Elemento 1</h2>
+            <p>Fade Right.</p>
+        </div>
+        <div class="box" data-aos="fade-left">
+            <h2>Elemento 2</h2>
+            <p>Fade Left.</p>
+        </div>
+        <div class="box" data-aos="fade-up">
+            <h2>Elemento 3</h2>
+            <p>Fade Up.</p>
+        </div>
+        <div class="box" data-aos="fade-down">
+            <h2>Elemento 4</h2>
+            <p>Fade Down.</p>
+        </div>
+
+</div>
+
+<script src="script/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+<div class="animation-container">
+
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h2>Front Side</h2>
+    </div>
+    <div class="flip-box-back">
+      <h2>Back Side</h2>
+    </div>
+  </div>
+</div>   
+ </div>
+
+
+
+
+</body>
+</html>

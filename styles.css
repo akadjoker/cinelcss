@@ -1,0 +1,500 @@
+
+
+body, html, h1, h2, h3, p, ul, li 
+{
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    position: fixed;
+    vertical-align: middle;
+    top: 2px; 
+    left: 0px; 
+    z-index: 1000; 
+    border-radius: 50%;
+}
+
+
+
+.logo img {
+    width: 60px; 
+    height: 75px; 
+}
+
+
+@media (max-width: 767px) 
+{
+    nav 
+    {
+        padding: 5px 0;
+    }
+
+    nav ul li 
+    {
+        display: block;
+        margin: 0 0 10px;
+    }
+}
+
+/* Estilos gerais */
+
+
+body, html {
+
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+header 
+{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav
+{
+    background-color: #666;
+    padding: 10px;
+}
+
+nav ul 
+{
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li 
+{
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a 
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+main 
+{
+    padding: 20px;
+}
+
+iframe 
+{
+    width: 100%;
+    height: 400px; 
+    border: none;
+}
+
+footer
+ {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Estilos para as divs */
+.div-exemplo 
+{
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.div-transformacao 
+{
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.div-transformacao.rotacao 
+{
+    transform: rotate(45deg);
+    background-color: #751c1c;
+
+}
+
+
+.div-transformacao.escala 
+{
+    transform: scale(1.5);
+}
+
+
+.div-transformacao.translacao 
+{
+    transform: translate(50px, 50px);
+}
+
+
+.div-transformacao.combinacao 
+{
+    transform: rotate(45deg) scale(1.5) translate(50px, 50px);
+}
+
+/*  animações */
+
+.animation-container
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.animated-box
+ {
+    width: 100px;
+    height: 100px;
+    background-color: #4b4040;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.move-animated-box
+ {
+    width: 100px;
+    height: 100px;
+    background-color: #4b4040;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.scale-animation 
+{
+    animation-name: scaleAnimation;
+}
+
+@keyframes scaleAnimation 
+{
+    0% 
+    {
+        transform: scale(1);
+    }
+    50% 
+    {
+        transform: scale(1.5);
+    }
+    100%
+     {
+        transform: scale(1);
+    }
+}
+
+
+.rotate-animation
+ {
+    animation-name: rotateAnimation;
+}
+
+@keyframes rotateAnimation
+ {
+    0% 
+    {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.move-animation 
+{
+    animation-name: moveAnimation;
+}
+
+@keyframes moveAnimation
+ {
+    0% 
+    {
+        transform: translateX(0);
+    }
+    50% 
+    {
+        transform: translateX(200px);
+    }
+    100% 
+    {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+.pagina-entrada
+ {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: entrada 0.5s ease forwards;
+}
+
+@keyframes entrada 
+{
+    from 
+    {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to 
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.pagina-saida 
+{
+    opacity: 1;
+    transform: translateY(0);
+    animation: saida 0.5s ease forwards;
+}
+
+@keyframes saida 
+{
+    from 
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to 
+    {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+
+.ios-container 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 1000px; /* Apenas para criar uma área de rolagem */
+  }
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.aquario-container 
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+  }
+
+.aquario 
+{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #87CEEB; /* cor do aquário */
+    overflow: hidden;
+  }
+  
+  
+/* Estilos para os peixes */
+.peixe 
+{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: orange; /* Cor do peixe "BASE"*/
+    border-radius: 50%;
+    animation: movePeixe 10s infinite linear;
+  }
+  
+  .peixe:nth-child(1) 
+  {
+    top: 20%;
+    left: 10%;
+  }
+  
+  .peixe:nth-child(2) 
+  {
+    top: 50%;
+    left: 50%;
+  }
+  
+  .peixe:nth-child(3)
+   {
+    top: 80%;
+    left: 80%;
+  }
+  
+
+  @keyframes movePeixe 
+  {
+    0% { transform: translateX(0) rotateY(0deg); }
+    25% { transform: translateX(100%) translateY(20%) rotateY(45deg); }
+    50% { transform: translateX(200%) rotateY(90deg); }
+    75% { transform: translateX(100%) translateY(-20%) rotateY(135deg); }
+    100% { transform: translateX(0) rotateY(180deg); }
+  }
+  
+
+
+  .peixe::before 
+  {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: orange; /* Cor do peixe */
+    top: 5px;
+    left: 10px;
+    border-radius: 50%;
+  }
+  
+  .peixe::after 
+  {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black; /* Cor dos olhos do peixe */
+    top: 10px;
+    left: 35px;
+    border-radius: 50%;
+  }
+
+
+
+
+.flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+  .checked {
+    color: orange;
+  }
+
+/* paralax */
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+  }
+  
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .layer-1 {
+    background: url('imagens/layer1.jpg') center center / cover;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+  }
+  
+  .layer-2 {
+    background: url('imagens/layer2.jpg') center center / cover;
+    transform: translateZ(-2px) scale(3);
+    z-index: -2;
+  }
+  
+  .layer-3 {
+    background: url('imagens/layer3.jpg') center center / cover;
+    transform: translateZ(-3px) scale(4);
+    z-index: -3;
+  }
+  
+
+  
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adicionado para espaçamento entre a paralaxe e as imagens */
+}
+
+.image-wrapper {
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    border-radius: 10px;
+    overflow: hidden; 
+    transition: transform 0.3s; /* Efeito de transição */
+    width: 50%;
+    height: 50%;
+}
+
+.image {
+    display: block;
+    transition: transform 0.3s; 
+}
+
+.image:hover {
+    transform: scale(1.1); 
+}
