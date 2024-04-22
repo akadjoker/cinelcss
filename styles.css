@@ -40,13 +40,7 @@ body, html, h1, h2, h3, p, ul, li
 /* Estilos gerais */
 
 
-body, html {
 
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    overflow-x: hidden;
-    height: 100%;
-}
 
 header 
 {
@@ -88,7 +82,8 @@ main
 iframe 
 {
     width: 100%;
-    height: 400px; 
+    height: 680px;
+    flex: 0 0 auto;
     border: none;
 }
 
@@ -295,9 +290,10 @@ footer
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 1000px; /* Apenas para criar uma área de rolagem */
+
+
   }
-  .box {
+  .ios-box {
     width: 200px;
     height: 200px;
     background-color: lightblue;
@@ -305,6 +301,15 @@ footer
     padding: 20px;
     text-align: center;
 }
+
+.elemento-aos {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 20px;
+    text-align: center;
+    line-height: 100px;
+  }
 
 
 .aquario-container 
@@ -498,3 +503,4 @@ footer
 .image:hover {
     transform: scale(1.1); 
 }
+
