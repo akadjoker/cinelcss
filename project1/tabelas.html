@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+    
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        td:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tabelas</h1>
+    </header>
+    <p>As tabelas são usadas para organizar dados em linhas e colunas. Elas são construídas usando a tag &lt;table&gt;, que contém uma ou mais linhas, cada uma representada pela tag &lt;tr&gt;, e dentro de cada linha, as células são representadas pela tag &lt;td&gt;.</p>
+    <p>Além disso, é possível adicionar funcionalidades como MouseOver e MouseOut para realçar células da tabela ao passar o mouse sobre elas.</p>
+    <table>
+        <tr>
+            <td>Item 1</td>
+            <td>Item 2</td>
+        </tr>
+        <tr>
+            <td>Item 3</td>
+            <td>Item 4</td>
+        </tr>
+    </table>
+
+    <section>
+     <h2>Tabela Simples</h2>
+     <table>
+         <tr>
+             <th>Nome</th>
+             <th>Idade</th>
+             <th>Cidade</th>
+         </tr>
+         <tr>
+             <td>Luis</td>
+             <td>46</td>
+             <td>Barreiro</td>
+         </tr>
+         <tr>
+             <td>Maria</td>
+             <td>25</td>
+             <td>Lisboa</td>
+         </tr>
+     </table>
+ </section>
+
+ <section>
+     <h2>Tabela com Cabeçalho e Corpo</h2>
+     <table>
+         <thead>
+             <tr>
+                 <th>Produto</th>
+                 <th>Preço</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>Box Android</td>
+                 <td>25,00</td>
+             </tr>
+             <tr>
+                 <td>Android TV</td>
+                 <td>500,00</td>
+             </tr>
+         </tbody>
+     </table>
+ </section>
+
+</body>
+</html>

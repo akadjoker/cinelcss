@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout de CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<div class="logo">
+    <img src="imagens/Joker.png" alt="Logo">
+</div>
+
+<script>
+  
+    function mudarPagina(novaPagina) 
+    {
+        var frame = document.querySelector('iframe[name="conteudo"]');
+        var paginaAtual = frame.contentDocument.body;
+
+     
+        
+        paginaAtual.classList.add('pagina-saida');
+        
+
+        
+        setTimeout(function() 
+        {
+            frame.src = novaPagina;
+        }, 500); //  duração da animação de saída
+
+   
+        frame.onload = function() 
+        {
+            var novaPagina = frame.contentDocument.body;
+            novaPagina.classList.add('pagina-entrada');
+
+           
+            
+            setTimeout(function()
+            {
+                paginaAtual.classList.remove('pagina-saida');
+                novaPagina.classList.remove('pagina-entrada');
+            }, 500); //  duração da animação de entrada
+        };
+    }
+
+</script>
+
+
+<body class="pagina-entrada">
+    <header>
+
+        <h1>Layout CSS</h1>
+    </header>
+    <nav>
+
+        <ul>
+            <li><a href="#" onclick="mudarPagina('basico.html')">CSS Básico</a></li>
+            <li><a href="#" onclick="mudarPagina('divs.html')">Divs em CSS</a></li>
+            <li><a href="#" onclick="mudarPagina('anim.html')">Animações em CSS</a></li>
+            <li><a href="#" onclick="mudarPagina('images.html')">Images</a></li>
+   
+        </ul>
+    </nav>
+    <main>
+        <iframe name="conteudo" src="basico.html" frameborder="0"></iframe>
+    </main>
+    <footer>
+        <p>Luis Santos AKA DJOKER</p>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+    </footer>
+</body>
+</html>

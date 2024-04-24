@@ -3,78 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout de CSS</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JOKER Blog</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
 </head>
 
-<div class="logo">
-    <img src="imagens/Joker.png" alt="Logo">
-</div>
-
 <script>
-  
     function mudarPagina(novaPagina) 
+{
+    var frame = document.querySelector('iframe[name="conteudo"]');
+    var paginaAtual = frame.contentDocument.body;
+
+ 
+    
+    paginaAtual.classList.add('pagina-saida');
+    
+
+    
+    setTimeout(function() 
     {
-        var frame = document.querySelector('iframe[name="conteudo"]');
-        var paginaAtual = frame.contentDocument.body;
+        frame.src = novaPagina;
+    }, 500); //  duração da animação de saída
 
-     
-        
-        paginaAtual.classList.add('pagina-saida');
-        
 
+    frame.onload = function() 
+    {
+        var novaPagina = frame.contentDocument.body;
+        novaPagina.classList.add('pagina-entrada');
+
+       
         
-        setTimeout(function() 
+        setTimeout(function()
         {
-            frame.src = novaPagina;
-        }, 500); //  duração da animação de saída
-
-   
-        frame.onload = function() 
-        {
-            var novaPagina = frame.contentDocument.body;
-            novaPagina.classList.add('pagina-entrada');
-
-           
-            
-            setTimeout(function()
-            {
-                paginaAtual.classList.remove('pagina-saida');
-                novaPagina.classList.remove('pagina-entrada');
-            }, 500); //  duração da animação de entrada
-        };
-    }
-
+            paginaAtual.classList.remove('pagina-saida');
+            novaPagina.classList.remove('pagina-entrada');
+        }, 500); //  duração da animação de entrada
+    };
+}
 </script>
 
 
+
 <body class="pagina-entrada">
-    <header>
 
-        <h1>Layout CSS</h1>
+
+    <header class="header">
+        <a href="#" class="logo">Joker</a>
+        
+        <i class="fas fa-bars" id="menu-icon"></i>
+
+
+        <nav class="navbar">
+
+            
+                <a href="#" onclick="mudarPagina('home.html')">Home</a>
+                <a href="#" onclick="mudarPagina('services.html')">Services</a>
+                <a href="#" onclick="mudarPagina('Skills.html')">Skills</a>
+                <a href="#" onclick="mudarPagina('experience.html')">Experience</a>
+                <a href="#" onclick="mudarPagina('galeria.html')">Gallery</a> 
+    
+    
+            
+        </nav>
+
     </header>
-    <nav>
-
-        <ul>
-            <li><a href="#" onclick="mudarPagina('basico.html')">CSS Básico</a></li>
-            <li><a href="#" onclick="mudarPagina('divs.html')">Divs em CSS</a></li>
-            <li><a href="#" onclick="mudarPagina('anim.html')">Animações em CSS</a></li>
-            <li><a href="#" onclick="mudarPagina('images.html')">Images</a></li>
    
+         
+            <main>
+                <iframe name="conteudo" src="home.html" frameborder="0"></iframe>
+            </main>
+            
+  
+
+
+
+    <footer class="footer">
+       
+        
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <ul class="list"> 
+            <li> <a href="#" onclick="mudarPagina('home.html')">Home</a></li>
+            <li><a href="#" onclick="mudarPagina('services.html')">Services</a> </li>
+            <li><a href="#" onclick="mudarPagina('Skills.html')">Skills</a> </li>
+            <li><a href="#" onclick="mudarPagina('experience.html')">Experience</a> </li>
+            <li><a href="#" onclick="mudarPagina('galeria.html')">Gallery</a> </li>
         </ul>
-    </nav>
-    <main>
-        <iframe name="conteudo" src="basico.html" frameborder="0"></iframe>
-    </main>
-    <footer>
-        <p>Luis Santos AKA DJOKER</p>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
+        <div class="Title">
+            <span>"The only thing I've learned from my illness is that every time I fall and get back up, I become stronger.</span>
+         </div>
+         <p class ="copyright">&#169; 2024 All rights reserved</p>
+
+
     </footer>
+    <script src="js/main.js"></script>
+
 </body>
 </html>

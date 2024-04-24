@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+      body {
+         font-family: Arial, sans-serif;
+         line-height: 1.6;
+         margin: 0;
+         padding: 0;
+         background-color: #f4f4f4;
+         color: #333;
+     }
+
+
+     header {
+         background-color: #333;
+         color: #fff;
+         padding: 20px;
+         text-align: center;
+     }
+
+
+     section {
+         padding: 20px;
+         margin-bottom: 20px;
+         background-color: #fff;
+         border-radius: 5px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     }
+
+
+     section h2 {
+         margin-top: 0;
+         color: #333;
+     }
+
+
+     a {
+         color: #007bff;
+         text-decoration: none;
+     }
+
+     a:hover {
+         text-decoration: underline;
+     }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS</h1>
+    </header>
+    <p>CSS (Cascading Style Sheets) é uma linguagem de folha de estilo usada para estilizar elementos HTML. Com CSS,
+      podes controlar a aparência de textos, cores, margens, posicionamento e muito mais.</p>
+    <p>Existem várias maneiras de adicionar estilos CSS a uma página da web:</p>
+    <ul>
+        <li>Estilos embutidos: usando a tag &lt;style&gt; no cabeçalho da página</li>
+        <li>Estilos internos: usando a tag &lt;style&gt; dentro de um elemento &lt;style&gt; na própria página</li>
+        <li>Estilos externos: usando um arquivo CSS externo vinculado à página usando a tag &lt;link&gt;</li>
+    </ul>
+    <h2>Seletores Básicos</h2>
+      <p>Os seletores CSS são usados para selecionar e estilizar elementos HTML. Alguns seletores básicos incluem:</p>
+      <ul>
+          <li>Elementos: `body`, `p`, `h1`, `div`, etc.</li>
+          <li>Classes: `.classe`, `.destaque`, etc.</li>
+          <li>IDs: `#id`, `#header`, etc.</li>
+      </ul>
+      <p>Exemplo:</p>
+      <pre>
+          <code>
+
+              p {
+                  color: #333;
+              }
+
+
+              .destaque {
+                  font-weight: bold;
+                  color: blue;
+              }
+
+
+              #header {
+                  background-color: #333;
+                  color: #fff;
+                  padding: 20px;
+              }
+          </code>
+      </pre>
+  </section>
+
+  <section>
+      <h2>Box Model</h2>
+      <p>O Box Model é uma parte fundamental do layout CSS e consiste em quatro propriedades: margin, border, padding e content.</p>
+      <p>Exemplo:</p>
+      <pre>
+          <code>
+
+              .box {
+                  margin: 10px;
+                  border: 1px solid #333;
+                  padding: 20px;
+                  background-color: #f4f4f4;
+              }
+          </code>
+      </pre>
+  </section>
+
+</body>
+</html>
