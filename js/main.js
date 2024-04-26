@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.addEventListener('click', function(event) 
     {
+      if (!menuIcon.checkVisibility()) 
+      {
+        return;
+      }
+      
         if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) 
         {
           
